@@ -2,6 +2,7 @@
   box-sizing: border-box
   margin: 0
   padding: 0
+  scroll-behavior: smooth
 body 
   font-family: "Roboto", sans-serif
   font-size: 16px
@@ -31,7 +32,6 @@ textarea
   align-items: center
 .nav
   margin-left: 76px
-  
   &-list 
     display: flex
     align-items: center
@@ -59,7 +59,12 @@ textarea
     width: 100%
     transition: .1s
 .contacts
+  display: flex
   margin-left: auto
+  &-item 
+    position: relative
+  &-item:not(:last-child)
+    margin-right: 40px
   &-link 
     color: #434455
     font-weight: 400
@@ -68,6 +73,18 @@ textarea
     letter-spacing: 0.02em
   &-link:not(:last-child)
     margin-right: 40px
+  &-item::after
+    content: ''
+    height: 4px
+    width: 0px
+    border-radius: 2px
+    background: #404bbf
+    position: absolute
+    bottom: -26px
+    right: 0%
+  &-item:hover::after
+    width: 100%
+    transition: .1s
 
 .hero
   background-image: url('../img/hero-bg.jpg') 
@@ -220,6 +237,7 @@ textarea
   &-media
     margin-right: 80px
 .overlay
+  display: none
   background: rgba(46, 47, 66, 0.5)
   position: fixed
   top: 0
@@ -238,6 +256,7 @@ textarea
     transform: translate(-50%, -50%)
   &-body
     display: flex
+    flex-direction: column
     padding: 24px 
     background: #fff
     img 
@@ -259,7 +278,6 @@ textarea
     justify-content: center
     flex-direction: column
     margin: 0 auto
-    margin-top: calc( 112px - 24px )
 .name
   background-image: url(../img/icon/human.svg)
   background-repeat: no-repeat
@@ -271,7 +289,7 @@ textarea
   margin-bottom: 8px
 .phone
   background-image: url(../img/icon/phone.svg)
-.mail
+.form-mail
   background-image: url(../img/icon/mail.svg)
 .text
   background-image: none
@@ -303,4 +321,6 @@ textarea
         a 
           text-decoration: underline
           color: #4d5ae5
+.is-open
+  display: block
      

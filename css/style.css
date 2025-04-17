@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -83,7 +84,14 @@ textarea {
 }
 
 .contacts {
+  display: flex;
   margin-left: auto;
+}
+.contacts-item {
+  position: relative;
+}
+.contacts-item:not(:last-child) {
+  margin-right: 40px;
 }
 .contacts-link {
   color: #434455;
@@ -94,6 +102,20 @@ textarea {
 }
 .contacts-link:not(:last-child) {
   margin-right: 40px;
+}
+.contacts-item::after {
+  content: "";
+  height: 4px;
+  width: 0px;
+  border-radius: 2px;
+  background: #404bbf;
+  position: absolute;
+  bottom: -26px;
+  right: 0%;
+}
+.contacts-item:hover::after {
+  width: 100%;
+  transition: 0.1s;
 }
 
 .hero {
@@ -293,6 +315,7 @@ textarea {
 }
 
 .overlay {
+  display: none;
   background: rgba(46, 47, 66, 0.5);
   position: fixed;
   top: 0;
@@ -313,6 +336,7 @@ textarea {
 }
 .modal-body {
   display: flex;
+  flex-direction: column;
   padding: 24px;
   background: #fff;
 }
@@ -337,7 +361,6 @@ textarea {
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  margin-top: 88px;
 }
 
 .name {
@@ -355,7 +378,7 @@ textarea {
   background-image: url(../img/icon/phone.svg);
 }
 
-.mail {
+.form-mail {
   background-image: url(../img/icon/mail.svg);
 }
 
@@ -392,4 +415,8 @@ textarea {
 .form-check .form-item p a {
   text-decoration: underline;
   color: #4d5ae5;
+}
+
+.is-open {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

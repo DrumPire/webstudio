@@ -22,19 +22,15 @@
       /></a>
       <nav class="nav">
         <ul class="nav-list">
-          <li class="nav-item"><a href="" class="nav-link">Studio</a></li>
-          <li class="nav-item"><a href="" class="nav-link">Portfolio</a></li>
-          <li class="nav-item"><a href="" class="nav-link">Contacts</a></li>
+          <li class="nav-item"><a href="#benefits" class="nav-link">Studio</a></li>
+          <li class="nav-item"><a href="#team" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="#portfolio" class="nav-link">Contacts</a></li>
         </ul>
       </nav>
-      <address class="contacts">
-        <a href="mailto:info@devstudio.com" class="contacts-link"
-          >info@devstudio.com</a
-        >
-        <a href="tel:+11(000)1111111" class="contacts-link"
-          >+11 (000) 111-11-11</a
-        >
-      </address>
+      <ul class="contacts">
+        <li class="contacts-item"><a href="mailto:info@devstudio.com" class="contacts-link">info@devstudio.com</a></li>
+        <li class="contacts-item"><a href="tel:+11(000)1111111" class="contacts-link">+11 (000) 111-11-11</a></li>
+      </ul>
     </header>
     <!--#endregion-->
     <!--#region main-->
@@ -46,8 +42,9 @@
         </h1>
         <button type="button" class="button">Order Service</button>
       </section>
-      <!-- section benefits -->
-      <section class="benefits container">
+    <!-- section benefits -->
+      <section class="benefits container" id="benefits">
+        <h2 hidden>benefits</h2>
         <div class="cards">
           <div class="card">
             <img src="img/benefits/antena.svg" alt="Antena icon" class="card-image">
@@ -81,7 +78,7 @@
         </div>
       </section>
       <!-- section team -->
-       <section class="team">
+       <section class="team" id="team">
         <h2 class="team-title">Our Team</h2>
         <div class="cards container">
           <div class="card">
@@ -155,7 +152,7 @@
         </div>
        </section>
        <!-- section portfolio -->
-        <section class="portfolio container">
+        <section class="portfolio container" id="portfolio">
           <h2 class="team-title">Our Team</h2>
         <div class="cards">
           <div class="card mb">
@@ -243,20 +240,21 @@
       </div>
     </footer>
     <!--#endregion-->
+    <!--#region modal-->
+    
     <section class="modal">
       <div class="overlay">
         <div class="modal-wrap">
           <div class="modal-body">
             <img src="img/icon/close.svg" alt="Image close">
             <p class="modal-title">Leave your contacts and we will call you back</p>
-            <div class="form-wrap">
               <form action="#" class="modal-form">
               <label for="name">Name</label>
               <input type="name" class="name">
               <label for="phone">Phone</label>
               <input type="phone" class="name phone">
               <label for="mail">Emale</label>
-              <input type="mail" class="name mail">
+              <input type="mail" class="name form-mail">
               <label for="text">Comment</label>
               <textarea name="text" id="" class="name text" placeholder="Text input"></textarea>
               <ul class="form-check">
@@ -269,10 +267,10 @@
               </ul>
               <button class="form-btn">Send</button>
             </form>
-            </div>
           </div>
         </div>
       </div>
     </section>
+    <!--#endregion-->
   </body>
 </html>
