@@ -35,6 +35,10 @@ textarea {
   outline: none;
 }
 
+address {
+  font-style: normal;
+}
+
 .arrow {
   display: block;
   width: 24px;
@@ -77,6 +81,9 @@ textarea {
   line-height: 150%;
   letter-spacing: 0.02em;
 }
+.nav-link:focus {
+  color: #404bbf;
+}
 .nav-item::after {
   content: "";
   height: 4px;
@@ -108,6 +115,9 @@ textarea {
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
+}
+.contacts-link:focus {
+  color: #404bbf;
 }
 .contacts-link:not(:last-child) {
   margin-right: 40px;
@@ -157,6 +167,10 @@ textarea {
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.04em;
+}
+
+.button:focus {
+  background: #404BBF;
 }
 
 .button:hover {

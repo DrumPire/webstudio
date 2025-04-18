@@ -21,6 +21,8 @@ label
 textarea
   resize: none
   outline: none
+address
+  font-style: normal
 .arrow
   display: block
   width: 24px
@@ -52,6 +54,8 @@ textarea
     font-size: 16px
     line-height: 150%
     letter-spacing: 0.02em
+  &-link:focus
+    color: #404bbf
   &-item::after
     content: ''
     height: 4px
@@ -78,6 +82,8 @@ textarea
     font-size: 16px
     line-height: 150%
     letter-spacing: 0.02em
+  &-link:focus 
+    color: #404bbf
   &-link:not(:last-child)
     margin-right: 40px
   &-item::after
@@ -119,6 +125,8 @@ textarea
   font-size: 16px
   line-height: 150%
   letter-spacing: 0.04em
+.button:focus
+  background: #404BBF
 .button:hover
   background-color: lighten(#4d5ae5, 3%)
 .benefits
