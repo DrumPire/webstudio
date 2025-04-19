@@ -442,4 +442,8 @@ address {
 
 .is-open {
   display: block;
+}
+
+.close {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
