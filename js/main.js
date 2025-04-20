@@ -35,13 +35,14 @@ const closeModal = () => {
   enabledScroll();
 };
 
-
 openBtn.addEventListener('click', openModal);
-closeBtn.addEventListener("click", closeModal);
 overlay.addEventListener('click', e => {
   const target = e.target;
 
-  if (target.classList.contains('overlay') || target.classList.contains('modal__close')) {
+  if (
+    target.classList.contains("overlay") ||
+    target.classList.contains("close")
+  ) {
     closeModal();
   }
 })
