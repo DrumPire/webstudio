@@ -1,3 +1,4 @@
+'use strict';
 const openBtn = document.querySelector(".button");
 const closeBtn = document.querySelector(".close");
 const overlay = document.querySelector(".overlay");
