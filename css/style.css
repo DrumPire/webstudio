@@ -274,6 +274,7 @@ address {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .footer-description {
   font-weight: 400;
@@ -446,4 +447,121 @@ address {
 
 .close {
   cursor: pointer;
+}
+
+@media (max-width: 1178px) {
+  .benefits .cards .card {
+    padding: 0 5px;
+  }
+  .card {
+    margin-bottom: 24px;
+  }
+  .card-image {
+    width: 99%;
+  }
+  .card:last-child {
+    margin-right: 24px;
+  }
+  .footer-form {
+    margin-top: 72px;
+  }
+}
+@media (max-width: 768px) {
+  .contacts {
+    flex-direction: column;
+  }
+  .contacts-link {
+    font-size: 12px;
+  }
+  .contacts .contacts-item {
+    margin-right: 0;
+  }
+  .nav-item:not(:last-child) {
+    margin-right: 20px;
+  }
+  .nav-item:hover::after {
+    width: 0;
+  }
+  .contacts-item:hover::after {
+    width: 0;
+  }
+  .benefits {
+    padding: 120px 16px;
+  }
+  .benefits .cards .card .card-image {
+    display: none;
+  }
+  .team .cards {
+    justify-content: space-around;
+    padding: 0 108px;
+  }
+  .team .cards .card {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .portfolio .cards {
+    max-width: 736px;
+  }
+  .portfolio .cards .card {
+    max-width: 356px;
+    width: 45%;
+  }
+  .footer-description {
+    margin-right: 0;
+  }
+  .mail {
+    min-width: 264px;
+  }
+  .modal-form input {
+    padding: 10px 32px;
+  }
+}
+@media (max-width: 620px) {
+  .container {
+    padding: 16px;
+  }
+  .title {
+    font-size: 36px;
+    margin-bottom: 72px;
+  }
+  .nav, address {
+    display: none;
+  }
+  .benefits .cards .card {
+    margin-bottom: 72px;
+  }
+  .benefits-title {
+    font-size: 36px;
+  }
+  .team .cards .card {
+    margin-bottom: 72px;
+  }
+  .portfolio .cards {
+    flex-direction: column;
+  }
+  .portfolio .cards .card {
+    margin-right: 0;
+    margin-bottom: 48px;
+    width: 100%;
+    min-width: 288px;
+  }
+  .footer-logo {
+    margin-bottom: 16px;
+  }
+  .footer-description {
+    margin-bottom: 72px;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+  }
+  .footer-group {
+    flex-direction: column;
+  }
+  .social-media {
+    margin-right: 0;
+  }
+  .mail {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
