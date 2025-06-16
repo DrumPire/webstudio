@@ -2,6 +2,16 @@
 const openBtn = document.querySelector(".button");
 const closeBtn = document.querySelector(".close");
 const overlay = document.querySelector(".overlay");
+const mobileMenu = document.querySelector(".mobile");
+const burgerBtn = document.querySelector(".burger");
+
+const openMobileMenu = () => {
+  mobileMenu.classList.add("is-open-menu");
+}
+
+const closeMobileMenu = () => {
+  mobileMenu.classList.remove("is-open-menu");
+}
 
 const disabledScroll = () => {
   document.body.dataset.scrollY = window.scrollY;
@@ -36,6 +46,8 @@ const closeModal = () => {
   enabledScroll();
 };
 
+burgerBtn.addEventListener('click', openMobileMenu);
+closeBtn.addEventListener("click", closeMobileMenu);
 openBtn.addEventListener('click', openModal);
 overlay.addEventListener('click', e => {
   const target = e.target;

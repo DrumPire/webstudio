@@ -8,6 +8,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 a {
@@ -441,12 +442,90 @@ address {
   color: #4d5ae5;
 }
 
+.burger {
+  display: none;
+}
+
 .is-open {
   display: block;
 }
 
 .close {
   cursor: pointer;
+}
+
+#menu-social {
+  display: flex;
+  justify-content: space-between;
+}
+
+#menu-social .social-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+#mobile-contacts {
+  display: flex;
+  margin-top: 168px;
+  flex-direction: column;
+}
+
+.mobile {
+  visibility: hidden;
+  position: absolute;
+  background-color: #fff;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-bottom: 40px;
+  padding-left: 16px;
+  transform: translateX(100%);
+  transition: 0.2s;
+}
+.mobile-contacts-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.mobile-contacts-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+.mobile-contacts-link:focus {
+  color: #4d5ae5;
+}
+.mobile-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+.mobile-item .nav-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+}
+.mobile-item .nav-link:focus {
+  color: #404bbf;
+}
+
+.mobile .social-list {
+  margin-top: 48px;
+}
+
+.mobile .close {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 24px;
+}
+
+.is-open-menu {
+  visibility: visible;
+  transform: translateX(0);
 }
 
 @media (max-width: 1178px) {
@@ -517,6 +596,9 @@ address {
   }
 }
 @media (max-width: 620px) {
+  .burger {
+    display: block;
+  }
   .container {
     padding: 16px;
   }
@@ -532,6 +614,9 @@ address {
   }
   .benefits-title {
     font-size: 36px;
+  }
+  .team .cards {
+    padding: 0;
   }
   .team .cards .card {
     margin-bottom: 72px;
@@ -563,5 +648,12 @@ address {
   .mail {
     margin-right: 0;
     margin-bottom: 16px;
+  }
+  .modal-body {
+    max-width: 288px;
+    padding: 16px 24px;
+  }
+  .name {
+    width: 256px;
   }
 }/*# sourceMappingURL=style.css.map */

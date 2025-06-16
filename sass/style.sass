@@ -4,9 +4,11 @@
   margin: 0
   padding: 0
   scroll-behavior: smooth
+  
 body 
   font-family: "Roboto", sans-serif
   font-size: 16px
+  overflow-x: hidden
 a
   text-decoration: none
 li 
@@ -143,7 +145,6 @@ address
     font-weight: 400
     font-size: 16px
     line-height: 150%
-    // letter-spacing: 0.02em
     color: #434455
 .cards
   display: flex
@@ -338,11 +339,69 @@ address
         a 
           text-decoration: underline
           color: #4d5ae5
+.burger
+  display: none
 .is-open
   display: block
 .close
-  cursor: pointer    
+  cursor: pointer 
+#menu-social
+  display: flex 
+  justify-content: space-between
+#menu-social .social-item:not(:last-child)
+  margin-right: 40px
+#mobile-contacts
+  display: flex
+  margin-top: 168px
+  flex-direction: column
+.mobile
+  visibility: hidden
+  position: absolute
+  background-color: #fff
+  right: 0
+  left: 0
+  top: 0
+  bottom: 0
+  z-index: 99
+  padding-top: 24px
+  padding-right: 24px
+  padding-bottom: 40px
+  padding-left: 16px
+  transform: translateX(100%)
+  transition: .2s
+  &-contacts
     
+    &-item:not(:last-child)
+      margin-bottom: 24px
+    &-link 
+      font-weight: 500
+      font-size: 20px
+      line-height: 1.2
+      letter-spacing: 0.02em
+      color: #434455
+    &-link:focus
+      color: #4d5ae5
+    
+  &-item:not(:last-child) 
+    margin-bottom: 40px 
+  &-item .nav-link 
+    font-weight: 700
+    font-size: 36px
+    line-height: 1.11111
+    letter-spacing: 0.02em
+    text-transform: capitalize
+    color: #2e2f42
+  &-item .nav-link:focus
+    color: #404bbf
+.mobile .social-list
+    margin-top: 48px      
+.mobile .close
+  display: block
+  margin-left: auto
+  margin-bottom: 24px
+.is-open-menu
+  visibility: visible
+  transform: translateX(0)
 @media (max-width: 1178px)
   .benefits .cards .card
     padding: 0 5px
@@ -393,6 +452,8 @@ address
   .modal-form input
     padding: 10px 32px
 @media (max-width: 620px)
+  .burger
+    display: block
   .container
     padding: 16px
   .title
@@ -405,6 +466,8 @@ address
   .benefits
     &-title 
       font-size: 36px
+  .team .cards
+    padding: 0
   .team .cards .card
     margin-bottom: 72px
   .portfolio .cards
@@ -428,4 +491,9 @@ address
   .mail
     margin-right: 0
     margin-bottom: 16px
-
+  .modal
+    &-body
+      max-width: 288px
+      padding: 16px 24px
+  .name
+    width: 256px
